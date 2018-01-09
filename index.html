@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Crush Express</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo"></a>
+      <ul class="right">
+        <li><a class = "home" href="index.html">Home</a></li>
+        <li><a class = "contact" href="contact.html">Contact</a></li>
+      </ul>
+  <img src="images/logo.png" alt="Crush Express" id="logo">
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+  <input type='file' id = "upload" onchange="readURL(this);" />
+    <img id="image" src="images/no-image3.jpg" alt="no image"/>
+  <div class = "container" id = "info-container">
+    <h1> Basic Information </h1>
+    <p id = "info"></p>
+        <div class="progress" id = "preloader">
+      <div class="indeterminate"></div>
+  </div>
+</div>
+
+      <br><br>
+
+    </div>
+  </div>
+
+  <footer class="page-footer green" id = "footer1">
+   <div class="footer-copyright">
+    <div class="container">
+      © 2018 Copyright Scrumdog Millionaires
+        <a class="grey-text text-lighten-4 right"></a>
+    </div>
+  </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script> 
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script>
+    $(document).ready(function(){
+        $("#preloader").hide();
+    });
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#image')
+                    .attr('src', e.target.result)
+                  };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    // Run the function once a user selects an image
+    $("#upload").on("change", function(event){
+          $("p").empty();
+          $("#preloader").show();
+      var extention = $("#upload").val().split('.').pop();
+      var uploadURL = "https://juqiwqcz39.execute-api.us-east-2.amazonaws.com/api/upload";
+
+      // Using FileReader to convert the image to Base64
+      var reader = new FileReader();
+      reader.readAsDataURL($('#upload')[0].files[0]);
+      reader.onload = function () {
+        var imageData = reader.result
+
+        // Send the image to our API
+        console.log("Starting Upload...")
+    $.ajax({
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+      },
+      url: uploadURL,
+      data: imageData,
+      contentType: false,
+      processData: false,
+      error: function(response){
+        console.log("ERROR: " + JSON.stringify(response));
+      },
+      success: function(response){
+        var test = JSON.parse(response.haystack);
+        console.log(JSON.stringify(test));
+            $("#preloader").hide();
+            $("p").text("Gender: " + JSON.stringify(test.people[0].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[0].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[0].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[0].attractiveness));  
+             $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[1].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[1].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[1].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[1].attractiveness)); 
+             $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[2].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[2].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[2].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[2].attractiveness));
+              $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[3].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[3].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[3].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[3].attractiveness)); 
+              $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[4].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[4].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[4].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[4].attractiveness));  
+              $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[5].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[5].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[5].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[5].attractiveness));
+              $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[6].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(rtest.people[6].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[6].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[6].attractiveness));
+              $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[7].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(rtest.people[7].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[7].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[7].attractiveness));
+              $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[8].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[8].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[8].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[8].attractiveness));
+              $("p").append("<br><br><br> Gender: " + JSON.stringify(test.people[9].gender.gender));
+            $("p").append("<br><br> Age: " + JSON.stringify(test.people[9].age));
+            $("p").append("<br><br> Ethnicity: " + JSON.stringify(test.people[9].ethnicity.ethnicity));
+            $("p").append("<br><br> Attractiveness: " + JSON.stringify(test.people[9].attractiveness));    
+
+          }
+        });
+      };
+    });
+  </script>
+
+  </body>
+</html>

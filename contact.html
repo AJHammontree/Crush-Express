@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Crush Express</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo"></a>
+      <ul class="right">
+        <li><a class = "home" href="index.html">Home</a></li>
+        <li><a class = "contact" href="contact.html">Contact</a></li>
+      </ul>
+  <img src="images/logo.png" alt="Crush Express" id="logo">
+  </nav>
+
+      <br><br>
+  <div id="main-container" class= "container">      
+    <section class="main-section">
+      <h1> Contact By Email </h1>      
+      
+      <form id="contact-form" action = "mailto:scrumdog.millionaires@gmail.com" method = "post" enctype = "text/plain">
+        <ul>
+          <li>
+            <label for="name"> Name: </label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required="required">
+          </li>
+          <li>
+            <label for="email"> Email: </label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+          </li>
+          <li>
+            <label for="message"> Message </label>
+            <textarea id="message" name="message" required="required"> </textarea>
+          </li>
+        </ul>
+        <input type="submit" id = "button">
+      </form>
+    </section>  
+    </div>
+  </div>
+
+  <div id="connect">      
+      <h2> Connect with Us </h2>        
+    
+        <a href="https://twitter.com/CrushExpress?lang=en" target="_blank"> <img src="images/twitter.png" class="social" alt="Twitter"> </a> 
+        <a href="https://www.facebook.com/Crush-Express-282999798894841/" target="_blank"> <img src="images/facebook.png" class="social" alt="Facebook"> </a>
+    
+      </div>
+
+  <footer class="page-footer green" id = "footer2">
+   <div class="footer-copyright">
+    <div class="container" >
+      © 2018 Copyright Scrumdog Millionaires
+        <a class="grey-text text-lighten-4 right"></a>
+    </div>
+  </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+<!--   <script type="text/javascript">
+
+    $(document).ready(function() {
+      $("#button").on("click", function() {
+        alert("Email Sent! We will get back with you as soon as we can!");
+      });
+
+    });
+
+</script> -->
+
+
+  </body>
+</html>

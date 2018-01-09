@@ -1,0 +1,509 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ body {
+ 	background: url("../images/tracks.jpg");
+	background-position: center center;
+	background: 0.4;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+
+ }
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+#upload {
+	position:relative;
+	top:17px;
+	left:360px;
+	border:solid 3px #009933 ;
+	font-size:13px;
+	width:356px;
+	height:27px;
+	background-color:white;
+	cursor: pointer;
+
+}
+
+.home, .contact {
+	font-size: 30px;
+	font-weight:bold;
+	padding-right:50px;
+	padding-left:50px;
+	background: grey;
+	border: solid 1px;
+	border-color:black; 
+	height:65px;
+}
+
+.home:hover, .contact:hover{
+	background-color:#009933;
+	cursor:pointer;
+}
+
+.home{
+	margin-right:50px;
+}
+
+#image {
+	border: solid 3px;
+	padding: 50px;
+	background-color:#b3b3b3;
+	width:600px;
+	height:auto;
+	position:relative;
+	left:-130px;
+
+}
+
+#footer1 {
+	text-align:center;
+	width:100%;
+	opacity:0.9;
+
+}
+
+#footer2{
+	position:fixed;
+	bottom:0px;
+	text-align:center;
+	width:100%;
+	opacity:0.9;
+}
+
+.light-blue{
+	opacity:0.7;
+}
+
+#info-container {
+
+	background-color:white;
+	border: solid 3px;
+	width:900px;
+	height:300px;
+	background-color:#e6e6e6;
+	overflow:auto;
+	margin-top:70px;
+
+}
+
+h1 {
+	font-size:30px;
+	text-align:center;
+	color:white;
+	text-shadow: 2px 2px 2px black;
+	text-decoration: underline;
+}
+
+p {
+	font-size:20px;
+	margin-left:10px;
+	text-shadow: 1px 1px 1px #80d4ff;
+}
+
+#main-container{
+	border:solid 3px;
+	background-color:#e6e6e6;
+	width:800px;
+	position:relative;
+	right:200px;
+	top:30px;
+}
+
+label{
+	color:black;
+	font-size:20px;
+	padding-left:20px;
+}
+
+#button{
+	margin-left:20px;
+	margin-bottom:25px;
+	font-size:20px;
+
+}
+
+#message{
+	height:150px;
+	padding-left:20px;
+}
+
+#name, #email{
+	padding-left:20px;
+	width:500px;
+}
+
+#preloader{
+	position:relative;
+	left:200px;
+	top:80px;
+	width:500px;
+}
+
+#logo{
+	position: absolute;
+	top:2px;
+	left:-200px;
+	height:60px;
+	width:220px;
+}
+
+#connect{
+	position:absolute;
+	right:190px;
+	top:140px;
+	background-color:#e6e6e6;
+	padding:15px;
+	border:solid 3px black;
+
+}
+
+h2{
+	font-size:30px;
+	color:white;
+	text-shadow: 2px 2px 2px black;
+	text-decoration: underline;
+	position:relative;
+	bottom:20px;
+	left:10px;
+}
+
+.social{
+	height:100px;
+	width:100px;
+	border:solid 1px black;
+	margin-right:10px;
+	margin-left:10px;
+	position:relative;
+	left:0px;
+	bottom:10px;
+}
+
+ @media screen and (max-width: 1441px){
+	  *{
+	  	max-width: 100%;
+	  }
+
+	  #image {
+		left:-150px;
+		width:450px;
+		height:auto;
+		width:550px;
+		height:auto;
+	}
+
+	#upload{
+		top:18px;
+		left:310px;
+	}
+
+ @media screen and (max-width: 1025px){
+	  *{
+	  	max-width: 100%;
+	  }
+
+	#logo{
+		left:-130px;
+	}
+
+	  #image {
+		left:80px;
+		width:450px;
+		height:auto;
+		width:550px;
+		height:auto;
+	}
+
+	#upload{
+		top:0px;
+		left:170px;
+	}
+
+	#info-container{
+		width:720px;
+	}
+
+	#main-container{
+		width:800px;
+		right:0px;
+	}
+
+	#connect{
+		top:600px;
+		left:370px;
+		width:280px;
+
+	}
+
+	.social{
+	margin-bottom:40px;
+	height:75px;
+	width:75px;
+	left:20px;
+	bottom:25px;
+	}
+
+@media screen and (max-width: 980px){
+	*{
+		max-width: 100%;
+	}
+
+	#logo{
+		left:-60px;
+	}
+
+	.home, .contact{
+		font-size:25px;
+		position:relative;
+		left:10px;
+	}
+
+	#info-container{
+		width:800px;
+	}
+
+	#image {
+		left:170px;
+		width:450px;
+		height:auto;
+	}
+
+	#upload{
+
+		top:0px;
+		left:220px;
+	}
+
+	#preloader{
+		size:smaller;
+	}
+
+	#main-container{
+		width:850px;
+		right:0px;
+	}
+
+	h2{
+		font-size:30px;
+	}
+
+	#connect{
+		right:20px;
+	}
+
+ }
+
+ @media screen and (max-width: 768px){
+	  *{
+	  	max-width: 100%;
+	  }
+		
+	#logo{
+		left:-40px;
+	}
+
+	.home, .contact{
+		font-size:20px;
+		padding-right:30px;
+		padding-left:30px;
+		left:-40px;
+
+	}
+
+	#info-container{
+		left:20px;
+		top:675px;
+		height:200px;
+		width:630px;
+		margin-bottom:40px;
+	}
+
+	#preloader{
+		left:50px;
+		top:45px;
+		width:600px;	
+	}
+
+	h1{
+		font-size:25px;
+	}
+
+	p{
+		font-size:15px;
+	}
+
+	#image, #myimage{
+		width:550px;
+		left:45px;
+	}
+
+	#upload{
+		left:150px;
+		width:334px;
+	}
+
+		#main-container{
+		width:650px;
+		right:0px;
+	}
+
+	h2{
+		font-size:30px;
+	}
+
+	#connect{
+		top:600px;
+		left:250px;
+
+	}
+
+	.social{
+	margin-bottom:60px;
+	height:85px;
+	width:85px;
+	left:15px;
+	bottom:15px;
+	}
+	
+ }
+
+ @media screen and (max-width: 640px){
+ 	*{
+ 		max-width: 100%;
+ 	}
+
+	#logo{
+		left:-20px;
+	}
+
+	.home, .contact{
+		font-size:20px;	
+		left:-20px;	
+		padding-left:20px;
+		padding-right:20px;
+	}
+
+	#info-container{
+		width:530px;
+		margin-bottom:40px;
+	}
+
+	#preloader{
+		width:490px;
+	}
+
+	h1{
+		font-size:25px;
+	}
+
+	p{
+		font-size:15px;
+	}
+
+	#image{
+		width:450px;
+		left:30px;
+	}
+
+	#upload{
+		left:105px;
+		width:334px;
+	}
+
+	#main-container{
+		width:550px;
+		right:0px;
+	}
+
+	#connect{
+		top:650px;
+		left:180px;
+
+	}
+
+	.social{
+	margin-bottom:40px;
+	height:75px;
+	width:75px;
+	left:20px;
+	bottom:25px;
+	}
+	
+ }
+
+  @media screen and (max-width: 376px){
+	  *{
+	  	max-width: 100%;
+	  }
+
+
+	#logo{
+		height:53px;
+		width:150px;
+		left:-10px;
+	}
+
+	.home, .contact{
+		font-size:10px;
+		position:relative;
+		left:10px;
+		height:57px;
+	}
+
+	#info-container{
+		width:330px;
+		margin-top:30px;
+	}
+
+	#image {
+		left:3px;
+		width:327px;
+		height:auto;
+	}
+
+	#upload{
+
+		top:0px;
+		left:40px;
+		width:250px;
+	}
+
+	#preloader{
+		width:230px;
+	}
+
+	#main-container{
+		width:350px;
+		right:0px;
+	}
+
+	#connect{
+		top:600px;
+		left:55px;
+
+	}
+
+	#name, #email{
+	padding-left:20px;
+	width:300px;
+}
+
+	.social{
+	margin-bottom:40px;
+	height:75px;
+	width:75px;
+	left:20px;
+	bottom:25px;
+	}
+
+ }
+
