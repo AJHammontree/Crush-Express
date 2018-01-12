@@ -43,7 +43,7 @@ exports.handler = function(event, context, callback) {
           var img_contenttype = data.ContentType;
           var imgurl = "https://s3.us-east-2.amazonaws.com/" + bucket + "/" + key;
           // Send request to haystack
-          var queryURL = "https://api.haystack.ai/api/image/analyze?apikey=8c4a1618d95ebe1a4426753babd303f5&output=json";
+          var queryURL = 
           request({
             method: 'POST',
             uri: queryURL,
